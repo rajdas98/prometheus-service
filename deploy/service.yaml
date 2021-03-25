@@ -19,7 +19,6 @@ rules:
       - update
     resourceNames:
       - "monitoring"
-
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -213,7 +212,7 @@ spec:
             - name: PROMETHEUS_NS
               value: 'monitoring'
             - name: PROMETHEUS_CM
-              value: 'prometheus-config'
+              value: 'prometheus-server-conf'
             - name: PROMETHEUS_LABELS
               value: 'app=prometheus'
             - name: ALERT_MANAGER_CM
